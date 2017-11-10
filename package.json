@@ -1,0 +1,73 @@
+{
+  "name": "pdf-microservice",
+  "description": "Get the PDF version of a website as service",
+  "homepage": "https://documentup.com/Kikobeats/pdf-microservice",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "author": {
+    "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
+    "url": "https://github.com/Kikobeats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/pdf-microservice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/pdf-microservice/issues"
+  },
+  "keywords": [
+    "microservice",
+    "pdf"
+  ],
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "browserless": "~2.3.2",
+    "compression": "~1.7.0",
+    "cors": "~2.8.4",
+    "express": "~4.16.2",
+    "express-status-monitor": "~1.0.0",
+    "helmet": "~3.9.0",
+    "jsendp": "~2.0.0",
+    "morgan": "~1.9.0",
+    "query-types": "~0.1.4"
+  },
+  "devDependencies": {
+    "coveralls": "latest",
+    "git-dirty": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "prettier-standard": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest",
+    "svr": "latest"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "dev": "svr",
+    "lint": "standard-markdown && standard",
+    "precommit": "lint-staged",
+    "precommit-lint": "prettier-standard",
+    "prelint": "npm run pretty",
+    "pretest": "npm run lint",
+    "pretty": "prettier-standard {core,test,bin}/**/*.js",
+    "start": "node src/server.js",
+    "test": "exit 0"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "precommit-lint",
+      "git add"
+    ]
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}
