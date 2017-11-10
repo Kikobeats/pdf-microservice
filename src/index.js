@@ -1,10 +1,13 @@
 'use strict'
 
 const {omit, mapKeys, camelCase} = require('lodash')
-const browserless = require('browserless')()
 const bodyParser = require('body-parser')
 const {promisify} = require('util')
 const fs = require('fs')
+
+const browserless = require('browserless')({
+  args: ['--no-sandbox', '--disable-setuid-sandbox']
+})
 
 const help = require('./help')
 
