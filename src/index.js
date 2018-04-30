@@ -1,8 +1,8 @@
 'use strict'
 
-const {omit, mapKeys, camelCase} = require('lodash')
+const { omit, mapKeys, camelCase } = require('lodash')
 const bodyParser = require('body-parser')
-const {promisify} = require('util')
+const { promisify } = require('util')
 const fs = require('fs')
 
 const browserless = require('browserless')({
@@ -29,6 +29,9 @@ module.exports = async (app, express) => {
     .use(require('morgan')(isProduction ? 'combined' : 'dev'))
     .use(express.static('static'))
     .disable('x-powered-by')
+
+  app.get('/robots.txt', (req, res) => res.status(204).send())
+  app.get('/favicon.txt', (req, res) => res.status(204).send())
 
   app.get('/', async function (req, res) {
     const { url } = req.query
