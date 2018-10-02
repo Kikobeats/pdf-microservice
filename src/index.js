@@ -5,9 +5,7 @@ const bodyParser = require('body-parser')
 const { promisify } = require('util')
 const fs = require('fs')
 
-const browserless = require('browserless')({
-  args: ['--no-sandbox', '--disable-setuid-sandbox']
-})
+const browserless = require('browserless')()
 
 const help = require('./help')
 
@@ -23,7 +21,6 @@ module.exports = async (app, express) => {
     .use(require('cors')())
     .use(require('jsendp')())
     .use(require('query-types').middleware())
-    .use(require('express-status-monitor')())
     .use(bodyParser.urlencoded({ extended: true }))
     .use(bodyParser.json())
     .use(require('morgan')(isProduction ? 'combined' : 'dev'))
@@ -33,7 +30,7 @@ module.exports = async (app, express) => {
   app.get('/robots.txt', (req, res) => res.status(204).send())
   app.get('/favicon.txt', (req, res) => res.status(204).send())
 
-  app.get('/', async function (req, res) {
+  app.get('/', async (req, res) => {
     const { url } = req.query
     if (!url) return res.success({ data: help })
 

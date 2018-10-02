@@ -26,12 +26,11 @@
     "compression": "~1.7.0",
     "cors": "~2.8.4",
     "express": "~4.16.2",
-    "express-status-monitor": "~1.1.0",
     "helmet": "~3.13.0",
     "jsendp": "~2.0.0",
     "lodash": "~4.17.4",
     "morgan": "~1.9.0",
-    "puppeteer": "~1.7.0",
+    "puppeteer": "~1.8.0",
     "query-types": "~0.1.4"
   },
   "devDependencies": {
@@ -52,7 +51,6 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "svr",
     "lint": "standard-markdown README.md && standard",
-    "precommit": "lint-staged",
     "prelint": "npm run pretty",
     "pretest": "npm run lint",
     "pretty": "prettier-standard {core,test,bin}/**/*.js",
@@ -70,5 +68,10 @@
     "env": [
       "mocha"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
