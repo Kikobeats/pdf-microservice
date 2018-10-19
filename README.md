@@ -10,7 +10,8 @@
 
 ## Related
 
-- [browserless](https://github.com/microlinkhq/browserless): Chrome Headless API made easy.
+- [browserless](https://github.com/microlinkhq/browserless) – Chrome Headless API made easy.
+- [bindery](https://evanbrooks.info/bindery/) – Book layout in the browser.
 
 ## License
 
