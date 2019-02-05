@@ -51,7 +51,6 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "svr",
     "lint": "standard-markdown README.md && standard",
-    "prelint": "npm run pretty",
     "pretest": "npm run lint",
     "pretty": "prettier-standard {core,test,bin}/**/*.js",
     "start": "node src/server.js",
