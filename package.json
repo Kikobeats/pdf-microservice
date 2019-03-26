@@ -21,15 +21,15 @@
     "pdf"
   ],
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "browserless": "~5.2.4",
-    "compression": "~1.7.0",
-    "cors": "~2.8.4",
-    "express": "~4.16.2",
+    "body-parser": "~1.18.3",
+    "browserless": "~5.2.5",
+    "compression": "~1.7.4",
+    "cors": "~2.8.5",
+    "express": "~4.16.4",
     "helmet": "~3.16.0",
     "jsendp": "~2.1.0",
-    "lodash": "~4.17.4",
-    "morgan": "~1.9.0",
+    "lodash": "~4.17.11",
+    "morgan": "~1.9.1",
     "puppeteer": "~1.13.0",
     "query-types": "~0.1.4"
   },
@@ -39,7 +39,7 @@
     "husky": "latest",
     "lint-staged": "latest",
     "prettier-standard": "latest",
-    "standard": "11",
+    "standard": "latest",
     "standard-markdown": "latest",
     "svr": "latest"
   },
