@@ -30,7 +30,7 @@
     "jsendp": "~2.1.0",
     "lodash": "~4.17.11",
     "morgan": "~1.9.1",
-    "puppeteer": "~1.13.0",
+    "puppeteer": "~1.14.0",
     "query-types": "~0.1.4"
   },
   "devDependencies": {
