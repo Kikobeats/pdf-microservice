@@ -22,15 +22,15 @@
   ],
   "dependencies": {
     "body-parser": "~1.19.0",
-    "browserless": "~5.8.0",
+    "browserless": "~5.9.1",
     "compression": "~1.7.4",
     "cors": "~2.8.5",
-    "express": "~4.17.0",
-    "helmet": "~3.18.0",
+    "express": "~4.17.1",
+    "helmet": "~3.20.0",
     "jsendp": "~2.1.0",
-    "lodash": "~4.17.11",
+    "lodash": "~4.17.15",
     "morgan": "~1.9.1",
-    "puppeteer": "~1.18.0",
+    "puppeteer": "~1.19.0",
     "query-types": "~0.1.4"
   },
   "devDependencies": {
